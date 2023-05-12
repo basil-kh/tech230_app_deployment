@@ -82,7 +82,7 @@ sudo npm install pm2 -g
 
 6. Change directory to the app folder:
 ```bash
-cd app
+cd /home/vagrant/app
 ```
 
 
@@ -118,3 +118,19 @@ gem install bundler
 bundle
 rake spec
 ```
+
+
+# Full automaation
+1. To fully automate this process, you should just input all the code above into your ![Alt text](imgs/provisionfile1.png) : 
+```bash
+sudo apt-get install python-software-properties -y
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+sudo apt-get install nodejs -y
+sudo npm install pm2 -g
+cd /home/vagrant/app
+npm install
+npm start
+```
+So in total your code should look like this:
+![Alt text](imgs/provisionfilecode.png)
+
